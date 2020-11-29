@@ -15,5 +15,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intento1)
 
         }
+
+        boton2.setOnClickListener {
+            val intento1 = Intent(this, Registrarse::class.java)
+            startActivity(intento1)
+
+        }
     }
 }
