@@ -7,6 +7,9 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        var userName = ""
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -16,8 +19,9 @@ class MainActivity : AppCompatActivity() {
             val bd = admin.writableDatabase
             val intento1 = Intent(this, Dashboard::class.java)
 
-            val fila = bd.rawQuery("select id from users where user='${editText.text.toString()}' and password='${editText2.text.toString()}'", null)
+            val fila = bd.rawQuery("select user from users where user='${editText.text.toString()}' and password='${editText2.text.toString()}'", null)
             if (fila.moveToFirst()) {
+                userName = fila.getString(0)
                 startActivity(intento1)
             } else
                 Toast.makeText(this, "El usuario no existe",  Toast.LENGTH_SHORT).show()
