@@ -3,6 +3,7 @@ package com.example.teamexam
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.ContentValues
+import android.content.Intent
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_registrarse.*
 
@@ -28,7 +29,8 @@ class Registrarse : AppCompatActivity() {
             editText3.setText("")
             editText4.setText("")
 
-            Toast.makeText(this, "Se registro el usuario y la tienda", Toast.LENGTH_SHORT).show()
+            val intento1 = Intent(this, MainActivity::class.java)
+            startActivity(intento1)
         }
     }
 }
