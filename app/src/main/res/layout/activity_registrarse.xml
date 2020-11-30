@@ -15,7 +15,7 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="59dp"
             android:background="#E91E63"
             android:gravity="center"
             android:text="Registro nuevo usuario"
@@ -69,7 +69,7 @@
             android:ems="10"
             android:gravity="center"
             android:hint="CORREO ELECTRONICO"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:padding="15dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -83,7 +83,7 @@
             android:ems="10"
             android:gravity="center"
             android:hint="NOMBRE DE TIENDA"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:padding="15dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
