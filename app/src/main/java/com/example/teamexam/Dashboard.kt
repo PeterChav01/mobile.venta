@@ -11,6 +11,11 @@ class Dashboard : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
+        imgbtn1.setOnClickListener {
+            val intento1 = Intent(this, Addons::class.java)
+            startActivity(intento1)
+        }
+
         imgbtn2.setOnClickListener {
             val intento1 = Intent(this, Clientes::class.java)
             startActivity(intento1)
