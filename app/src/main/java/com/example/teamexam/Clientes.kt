@@ -12,10 +12,8 @@ class Clientes : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clientes)
 
-
-
         boton1.setOnClickListener {
-            val admin = AdminSQLiteOpenHelper(this,"administracion", null, 1)
+            val admin = AdminSQLiteOpenHelper(this,"administracionn", null, 1)
             val bd = admin.writableDatabase
             val registro = ContentValues()
             registro.put("nombre", editText1.getText().toString())
@@ -33,9 +31,8 @@ class Clientes : AppCompatActivity() {
             Toast.makeText(this, "Se cargaron los datos del Cliente", Toast.LENGTH_SHORT).show()
         }
 
-
         boton2.setOnClickListener {
-            val admin = AdminSQLiteOpenHelper(this, "administracion", null, 1)
+            val admin = AdminSQLiteOpenHelper(this, "administracionn", null, 1)
             val bd = admin.writableDatabase
             val fila = bd.rawQuery("select direccion, telefono, email from cliente where nombre='${editText1.text.toString()}'", null)
             if (fila.moveToFirst()) {
@@ -46,7 +43,7 @@ class Clientes : AppCompatActivity() {
                 Toast.makeText(this, "No existe un Cliente con dicho nombre", Toast.LENGTH_SHORT).show()
             bd.close()
         }
-
+/*
         boton3.setOnClickListener {
             val admin = AdminSQLiteOpenHelper(this, "administracion", null, 1)
             val bd = admin.writableDatabase
@@ -68,15 +65,15 @@ class Clientes : AppCompatActivity() {
                 Toast.makeText(this, "No existe un Cliente con dicho nombre", Toast.LENGTH_SHORT).show()
             bd.close()
         }
-        /*
+*/
         boton3.setOnClickListener {
-            val admin = AdminSQLiteOpenHelper(this, "administracion", null, 1)
+            val admin = AdminSQLiteOpenHelper(this, "administracionn", null, 1)
             val bd = admin.writableDatabase
             val registro = ContentValues()
             registro.put("direccion", editText2.text.toString())
             registro.put("telefono", editText3.text.toString())
             registro.put("email", editText4.text.toString())
-            val cant = bd.update("cliente", registro, "nombre= ${editText1.text.toString()}", null)
+            val cant = bd.update("cliente", registro, "nombre='${editText1.text.toString()}'", null)
             bd.close()
             if (cant == 1)
                 Toast.makeText(this, "Se modificaron los datos", Toast.LENGTH_SHORT).show()
@@ -85,9 +82,9 @@ class Clientes : AppCompatActivity() {
         }
 
         boton4.setOnClickListener {
-            val admin = AdminSQLiteOpenHelper(this, "administracion", null, 1)
+            val admin = AdminSQLiteOpenHelper(this, "administracionn", null, 1)
             val bd = admin.writableDatabase
-            val cant = bd.delete("cliente", "nombre= ${editText1.text.toString()}", null)
+            val cant = bd.delete("cliente", "nombre='${editText1.text.toString()}'", null)
             bd.close()
             editText1.setText("")
             editText2.setText("")
@@ -97,8 +94,7 @@ class Clientes : AppCompatActivity() {
                 Toast.makeText(this, "Se borró el Cliente con dicho nombre", Toast.LENGTH_SHORT).show()
             else
                 Toast.makeText(this, "No existe un Clienteo con dicho nombre", Toast.LENGTH_SHORT).show()
-        }*/
-
+        }
 
     }
 }
