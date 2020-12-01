@@ -43,29 +43,7 @@ class Clientes : AppCompatActivity() {
                 Toast.makeText(this, "No existe un Cliente con dicho nombre", Toast.LENGTH_SHORT).show()
             bd.close()
         }
-/*
-        boton3.setOnClickListener {
-            val admin = AdminSQLiteOpenHelper(this, "administracion", null, 1)
-            val bd = admin.writableDatabase
-            val fila = bd.rawQuery("update cliente set direccion = '${editText2.text.toString()}', telefono = '${editText3.text.toString()}', email = '${editText4.text.toString()}' where nombre='${editText1.text.toString()}'", null)
-            if (fila == null) {
-
-            } else
-                Toast.makeText(this, "No existe un Cliente con dicho nombre", Toast.LENGTH_SHORT).show()
-            bd.close()
-        }
-
-        boton4.setOnClickListener {
-            val admin = AdminSQLiteOpenHelper(this, "administracion", null, 1)
-            val bd = admin.writableDatabase
-            val fila = bd.rawQuery("delete * from cliente where nombre='${editText1.text.toString()}'", null)
-            if (fila == null) {
-
-            } else
-                Toast.makeText(this, "No existe un Cliente con dicho nombre", Toast.LENGTH_SHORT).show()
-            bd.close()
-        }
-*/
+        
         boton3.setOnClickListener {
             val admin = AdminSQLiteOpenHelper(this, "administracionn", null, 1)
             val bd = admin.writableDatabase
