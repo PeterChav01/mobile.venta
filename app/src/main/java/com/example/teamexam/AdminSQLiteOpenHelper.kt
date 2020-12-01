@@ -9,6 +9,7 @@ class AdminSQLiteOpenHelper(context: Context, name: String, factory: CursorFacto
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("create table users(id int primary key, user text, password text, email text, store text)")
+        db.execSQL("create table cliente(id int primary key, nombre text, direccion text, telefono text, email text, encargado text)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {

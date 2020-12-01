@@ -22,12 +22,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="119dp"
-        android:layout_marginBottom="117dp"
         android:text="Log Out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.677" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -36,7 +37,7 @@
         android:layout_marginTop="101dp"
         android:layout_marginEnd="2dp"
         android:layout_marginRight="2dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintEnd_toStartOf="@+id/imgbtn2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/product" />
@@ -52,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/imgbtn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="2dp"
@@ -67,9 +68,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Clientes"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton4"
-        app:layout_constraintStart_toStartOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+        app:layout_constraintEnd_toEndOf="@+id/imgbtn2"
+        app:layout_constraintStart_toStartOf="@+id/imgbtn2"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtn2" />
 
     <ImageButton
         android:id="@+id/imgbtn3"
